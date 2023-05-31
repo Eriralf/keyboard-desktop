@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,500;0,600;0,700;1,300&display=swap');
 
 * {
     padding: 0;
@@ -7,7 +8,8 @@
 }
 
 :root {
-    --font-primary: 'Sora', sans-serif;
+    --font-primary: 600 9pt 'Sora', sans-serif;
+    --font-secondary: 700 10pt 'Bai Jamjuree', sans-serif;
     --font-primary-color: #ffffff;
     --font-secondary-color: #c9c9c9;
     --color-gray: #4a4a4a;
@@ -55,7 +57,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: var(--font-primary);
+    font: var(--font-primary);
     margin-bottom: 1.2rem;
 }
 
@@ -76,7 +78,7 @@ body {
 }
 
 .keycaps-select-container div input {
-    font-family: var(--font-primary);
+    font: var(--font-primary);
     font-weight: 500;
     font-size: 9pt;
     cursor: pointer;
@@ -132,6 +134,7 @@ button {
     border: var(--border-key);
     background: var(--key-color-gray);
     overflow: hidden;
+    font: var(--font-primary);
 }
 
 button::before {
@@ -157,8 +160,7 @@ button:active:before {
 
 button i,
 button span {
-    font-family: var(--font-primary);
-    font-size: 9pt;
+    /* font-size: 9pt; */
     position: absolute;
     top: 40%;
     left: 40%;
@@ -223,7 +225,6 @@ button:active span{
 
 .black-key {
     background: var(--key-color-black);
-    color: var(--color-orange);
 }
 
 .black-key::before {
@@ -240,6 +241,8 @@ button:active span{
 
 .white-key {
     background: var(--key-color-white);
+    color: black;
+    font: var(--font-secondary);
 }
 
 .white-key::before {
@@ -248,6 +251,8 @@ button:active span{
 
 .gold-key {
     background: var(--key-color-gold);
+    color: black;
+    font: var(--font-secondary);
 }
 
 .gold-key::before {
@@ -257,6 +262,7 @@ button:active span{
 .purple-key {
     background: var(--key-color-purple);
     color: var(--color-orange);
+    font: var(--font-secondary);
 }
 
 .purple-key::before {
